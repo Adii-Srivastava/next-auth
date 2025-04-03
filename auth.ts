@@ -36,12 +36,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
          })
 
          if(!user){
-          user=await prisma.user.create({
-            data:{
-              email,
-              hashedPassword: hash,
-            }
-          })
+          // user=await prisma.user.create({
+          //   data:{
+          //     email,
+          //     hashedPassword: hash,
+          //   }
+          // })
+          console.log("User don't exist. Plese Check your credentials or SignUp")
          }else{
            const isMatch= bcrypt.compareSync(
             credentials.password as string,

@@ -11,7 +11,7 @@ const AuthButton = () => {
         pending ? "bg-gray-600" : "bg-blue-600" 
       } rounded-md w-full px-12 py-3 text-sm font-medium text-white hover:bg-blue-700`}
     >
-      {pending ? "Loading..." : "Sign in"}
+      {pending ? "Loading..." : "Sign In"}
     </button>
   );
 };

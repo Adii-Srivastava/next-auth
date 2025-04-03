@@ -1,7 +1,6 @@
 import React from 'react'
-import LoginGithub from "@/components/LoginGithub"
 import LoginForm from '@/components/LoginForm'
-// import LoginGoogle from '@/components/LoginGoogle'
+import LoginGithub from '@/components/LoginGithub'
 
 type Props = {}
 
@@ -13,6 +12,7 @@ const page = (props: Props) => {
          <LoginForm/>
          <p className='border-t-1 mt-3 border-gray-500'></p>
          <LoginGithub/>
+         
          {/* <LoginGoogle/> */}
       </div>
     </div>

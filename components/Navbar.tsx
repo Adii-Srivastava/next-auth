@@ -21,11 +21,30 @@ const Navbar = async (props: Props) => {
 
             <div className='flex items-center gap-x-5'>
               {!session?.user ? (
+                <div className='flex items-center'>
                  <Link href={"/sign-in"}>
-                 <div className='bg-indigo-500 text-white px-4 py-2 rounded-md'>Sign In</div>
+                 <div className='bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 mr-2'>Sign In</div>
                  </Link>
+                 <Link href={"/sign-up"}>
+                 <div className='bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600'>Sign Up</div>
+                 </Link>
+                </div>
               ): (
-                <Logout/>
+                <div className='flex items-center gap-x-2 text-sm '>
+                  {session.user.image &&(
+                    <Image
+                    src={session.user.image}
+                    width={40}
+                    height={40}
+                    alt='User Avatar'
+                    
+                    className='rounded-full border border-white hover:cursor-pointer'
+                    />
+                  )}
+                  {session.user.name}
+                  <Logout/>
+                </div>
+                
               )}
             
         </div>
